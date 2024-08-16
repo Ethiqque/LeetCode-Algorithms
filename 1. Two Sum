@@ -1,4 +1,4 @@
-https://leetcode.com/submissions/detail/1338361049/
+https://leetcode.com/problems/two-sum/description/
 
 public class Solution {
     public int[] twoSum(int[] nums, int target) {
