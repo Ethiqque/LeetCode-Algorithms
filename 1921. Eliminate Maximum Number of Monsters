@@ -1,0 +1,28 @@
+https://leetcode.com/problems/eliminate-maximum-number-of-monsters/description/
+
+import java.util.Arrays;
+
+class Solution {
+    public int eliminateMaximum(int[] dist, int[] speed) {
+        int n = dist.length;
+        double[] timeToCity = new double[n];
+
+        for (int i = 0; i < n; i++) {
+            timeToCity[i] = (double) dist[i] / speed[i];
+        }
+
+        Arrays.sort(timeToCity);
+
+        int monstersEliminated = 0;
+        for (int i = 0; i < n; i++) {
+            // If the time for this monster to reach the city is less than or equal to the time passed,
+            // then we lose before we can eliminate this monster
+            if (timeToCity[i] <= i) {
+                break;
+            }
+            monstersEliminated++;
+        }
+
+        return monstersEliminated;
+    }
+}
