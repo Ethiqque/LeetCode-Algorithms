@@ -1,0 +1,21 @@
+https://leetcode.com/problems/valid-parentheses/description/
+
+class Solution {
+        private static final Map<Character, Character> MAP = Map.of(')', '(', ']', '[', '}', '{');
+
+    public boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+        for (char c : s.toCharArray()) {
+            if (!MAP.containsKey(c)) {
+                stack.add(c);
+            } else {
+                if (stack.isEmpty() || MAP.get(c) != stack.peek()) {
+                    return false;
+                }
+                stack.pop();
+            }
+        }
+
+        return stack.isEmpty();
+    }
+}
