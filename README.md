@@ -1,3 +1,3 @@
 # Algoritms
 
-Here is my solutions on LeetCode tasks
+Here's my solutions on LeetCode tasks
