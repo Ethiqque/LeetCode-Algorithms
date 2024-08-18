@@ -1,4 +1,4 @@
-[**Task**](https://leetcode.com/problems/frequency-of-the-most-frequent-element/description/)
+https://leetcode.com/problems/frequency-of-the-most-frequent-element/description/
 
 class Solution {
     public int maxFrequency(int[] nums, int k) {
