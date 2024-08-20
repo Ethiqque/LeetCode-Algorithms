@@ -1,3 +1,6 @@
+Time: O(n log(n))
+Space:	O(n)
+
 public static void mergeSort(int[] arr) {
 	if (arr.length == 1){
 		return;
