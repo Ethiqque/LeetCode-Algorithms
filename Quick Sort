@@ -1,3 +1,6 @@
+Time: O(n log(n))
+Space: O(n log(n))
+
 public void quickSort(int arr[], int begin, int end) {
     if (begin < end) {
         int partitionIndex = partition(arr, begin, end);
