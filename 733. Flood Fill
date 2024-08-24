@@ -1,0 +1,32 @@
+https://leetcode.com/problems/flood-fill/description/
+
+Time: O(m*n)
+Space: O(m*n)
+
+class Solution {
+    public int[][] floodFill(int[][] image, int sr, int sc, int color) {
+        int old = image[sr][sc];
+        if (old != color) {
+            dfs(image, sr, sc, old, color);
+        }
+        return image;
+    }
+
+    private void dfs(int[][] image, int row, int col, int old, int color) {
+        if (image[row][col] == old) {
+            image[row][col] = color;
+            if (row >= 1) {
+                dfs(image, row - 1, col, old, color);
+            }
+            if (row < image.length - 1) {
+                dfs(image, row + 1, col, old, color);
+            }
+            if (col >= 1) {
+                dfs(image, row, col - 1, old, color);
+            }
+            if (col < image[0].length - 1) {
+                dfs(image, row, col + 1, old, color);
+            }
+        }
+    }
+}
